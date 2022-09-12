@@ -16,9 +16,26 @@
 		// Configure properties specific to VS Code.
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
-			"settings": {},
+			"settings": {
+				"editor.formatOnSave": true,
+				"[javascript]": {
+    			"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[typescript]": {
+    			"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[typescriptreact]": {
+    			"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"files.associations": {
+					"*.json": "jsonc"
+				}
+			},
 			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": []
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode"
+			]
 		}
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
